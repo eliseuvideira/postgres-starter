@@ -1,5 +1,5 @@
-import dotenv from "dotenv-safe";
-import Knex from "knex";
+import dotenv from 'dotenv-safe';
+import Knex from 'knex';
 
 dotenv.config();
 
@@ -9,15 +9,15 @@ interface ConfigProps {
 
 const config: ConfigProps = {
   development: {
-    client: "sqlite3",
+    client: 'sqlite3',
     connection: {
-      filename: "./db.sqlite3",
+      filename: './db.sqlite3',
     },
     useNullAsDefault: true,
   },
 
   production: {
-    client: "postgresql",
+    client: 'postgresql',
     connection: {
       database: process.env.POSTGRES_DB,
       user: process.env.POSTGRES_USER,
@@ -28,7 +28,7 @@ const config: ConfigProps = {
       max: 10,
     },
     migrations: {
-      tableName: "knex_migrations",
+      tableName: 'knex_migrations',
     },
   },
 };
