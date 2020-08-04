@@ -3,5 +3,23 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Eliseu Videira <eliseuvideira1@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "dotenv-safe": "^8.2.0",
+    "knex": "^0.21.2",
+    "pg": "^8.3.0",
+    "sqlite3": "^5.0.0"
+  },
+  "scripts": {
+    "make": "knex migrate:make",
+    "migrate": "knex migrate:latest",
+    "rollback": "knex migrate:rollback"
+  },
+  "devDependencies": {
+    "@types/dotenv-safe": "^8.1.1",
+    "@types/node": "^14.0.27",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  }
 }
